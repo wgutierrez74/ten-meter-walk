@@ -1,0 +1,31 @@
+{
+  "name": "ten-meter-walk-test",
+  "version": "1.0.0",
+  "description": "Calculate Ten Meter Walk Test Scores",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js --ignore tests",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "engines": {
+    "node": "10.16.0"
+  },
+  "author": "William Gutierrez",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.432.0",
+    "body-parser": "^1.17.2",
+    "concurrently": "^3.5.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.15.3",
+    "migrate-mongoose": "^3.2.2",
+    "mongoose": "^4.13.18",
+    "nodemon": "^1.18.10",
+    "path-parser": "^2.0.2",
+    "uuid": "^3.2.1"
+  }
+}
