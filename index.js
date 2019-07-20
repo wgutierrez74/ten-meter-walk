@@ -12,8 +12,7 @@ const keys = require("./config/keys");
 require("dotenv").config();
 require("./models/Test");
 
-const mongoURI = process.env.mongoURI || keys.mongoURI;
-console.log(mongoURI);
+const mongoURI = process.env.mongoURI;
 mongoose.Promise = global.Promise;
 mongoose.connect(mongoURI, { useMongoClient: true });
 
