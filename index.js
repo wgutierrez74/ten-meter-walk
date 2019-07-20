@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
 
-const keys = require("./config/keys");
+//const keys = require("./config/keys");
 
 require("dotenv").config();
 require("./models/Test");
