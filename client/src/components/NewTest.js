@@ -135,8 +135,9 @@ class NewTest extends React.Component{
 		}
 		//Prevent user from submitting document over and over again
 		document.getElementById("submit-test-button").style.visibility="hidden";
-		
-		let response = await axios.post("/tests", {test:finalTest, date: new Date()});
+		const newDate = new Date();
+		console.log(newDate);
+		let response = await axios.post("/tests", {test:finalTest, date: newDate});
 		response = response.data;
 		
 		if(!response.error){
