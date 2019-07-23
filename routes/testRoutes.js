@@ -12,11 +12,11 @@ module.exports = (app) =>{
 
 	//Create new test document
 	app.post("/tests", async (req, res)=>{
-		let dateObj = new Date();
+		let dateObj = new Date(req.body.date);
 		const date = convertDateObject(dateObj);
 
 		const newTest = new Test({
-			...req.body,
+			...req.body.test,
 			date,
 			created: dateObj
 		});

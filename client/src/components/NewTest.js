@@ -131,12 +131,12 @@ class NewTest extends React.Component{
 			notes: this.state.notes,
 			trials: this.state.trials,
 			averageTime: this.state.averageTime,
-			averageVelocity: this.state.averageVelocity
+			averageVelocity: this.state.averageVelocity,
 		}
 		//Prevent user from submitting document over and over again
 		document.getElementById("submit-test-button").style.visibility="hidden";
 		
-		let response = await axios.post("/tests", finalTest);
+		let response = await axios.post("/tests", {test:finalTest, date: new Date()});
 		response = response.data;
 		
 		if(!response.error){
