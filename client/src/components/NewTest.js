@@ -124,6 +124,9 @@ class NewTest extends React.Component{
 	submitTest = async (event) =>{
 		event.preventDefault();
 		
+		const created = new Date();
+		const date = this.getDateString(created);
+
 		const finalTest = {
 			name: this.state.name,
 			device: this.state.device,
@@ -132,6 +135,8 @@ class NewTest extends React.Component{
 			trials: this.state.trials,
 			averageTime: this.state.averageTime,
 			averageVelocity: this.state.averageVelocity,
+			date,
+			created
 		}
 		//Prevent user from submitting document over and over again
 		document.getElementById("submit-test-button").style.visibility="hidden";
@@ -169,6 +174,21 @@ class NewTest extends React.Component{
 			});
 		}
 		
+	}
+
+	getDateString = (date) =>{
+		const month = date.getMonth() + 1; //months from 1-12
+		const day = date.getDate();
+		const year = date.getFullYear();
+		let minutes = date.getMinutes();
+		minutes = minutes < 10 ? "0" + minutes : minutes
+		let hour = date.getHours();
+		let suffix = hour > 11 ? "PM" : "AM";
+		hour = hour%12;
+		hour = hour === 0 ? 12 : hour
+
+		//Date String mm/dd/yyyy hh:mm xm
+		return (month + "/" + day + "/" +year + " " + hour+":"+minutes+" "+ suffix);
 	}
 
 	//Modal Content upon successful save to DB
