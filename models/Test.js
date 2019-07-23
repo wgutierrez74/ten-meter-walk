@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
+//Test Document Schema
 const testSchema = new Schema({
 	name: {
 		type: String,
@@ -8,7 +9,8 @@ const testSchema = new Schema({
 	},
 	device: String,
 	type: String,
-	tests: [String],
+	notes: String,
+	trials: [String],
 	averageTime: String,
 	averageVelocity: String,
 	date: String,

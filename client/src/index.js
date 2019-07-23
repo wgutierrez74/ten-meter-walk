@@ -1,14 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import App from './components/App';
+import App from "./components/App";
+import "./style/App.css";
 
-import './style/App.css';
 
 ReactDOM.render(
 	<App />,
 	document.querySelector("#root")
 );
-
-
-

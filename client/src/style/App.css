@@ -1,13 +1,10 @@
-html, body{
-	height: 100%;
+.detail{
+	display: block;
+	margin-bottom: 1em;
 }
 
-body{
-	background-color: #00bbf9;
+#patient-notes:disabled, #patient-notes-modal:disabled{
+	opacity: 1;
+	background-color: rgba(160,160,160,0.3);
+
 }
-
-
-.ui.grid{
-	height: 100%;
-}
-
