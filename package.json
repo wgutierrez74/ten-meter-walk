@@ -22,7 +22,7 @@
     "concurrently": "^3.5.0",
     "dotenv": "^8.0.0",
     "express": "^4.15.3",
-    "migrate-mongoose": "^3.2.2",
+    "migrate-mongoose": "^4.0.0",
     "mongoose": "^4.13.18",
     "nodemon": "^1.18.10",
     "path-parser": "^2.0.2",
