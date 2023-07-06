@@ -9,10 +9,6 @@ have the ability to look at old tests and edit some notes from the test.
 
 * Currently not working since the DB service I was using is no longer available. 
 
-### Prerequisites:
-To use this app simply visit the website: [https://ten-meter-walk.herokuapp.com/](https://ten-meter-walk.herokuapp.com/)
-Page may load slowly on initial render since Heroku is "waking up" App.
-
 ### Built With:
 App was developed utilizing the MERN stack and styled with Semantic-UI.
 
